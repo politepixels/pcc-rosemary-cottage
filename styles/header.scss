@@ -1,0 +1,40 @@
+header {
+  z-index: 2;
+  box-shadow: $shadow-lg;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 30px;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  @media (max-width: $mob) {
+    padding: 10px 15px;
+  }
+  img.logo {
+    height: 100px;
+    margin: -20px -40px;
+    display: block;
+  }
+  .contact {
+    font-size: .875rem;
+    line-height: 1.4;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    @media (max-width: $tab) {
+      gap: 30px;
+    }
+    @media (max-width: $mob) {
+      flex-direction: column;
+      gap: 10px;
+      justify-content: flex-end;
+      font-size: .75rem;
+    }
+    .emails {
+      display: flex;
+      gap: 5px;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Maitree:wght@200;300;400;500;600;700&display=swap');
+
+@import 'config';
+@import 'header';
+@import 'main';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 18px;
+}
+body {
+  --side-padding: 15px;
+  font-family: $font-base;
+  line-height: $lh-text;
+  color: $clr-text;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  [class^="wrapper-"], [class*=" wrapper-"] {
+    width: 100%;
+    margin: 0 auto;
+    &.wrapper-lg {
+      max-width: calc(1000px + var(--side-padding)*2);
+      padding: 0 var(--side-padding);
+    }
+    &.wrapper-sm {
+      max-width: calc(660px + var(--side-padding)*2);
+      padding: 0 var(--side-padding);
+    }
+  }
+  .shade-1 {
+    background-color: $clr-shade-1;
+  }
+  .shade-2 {
+    background-color: $clr-shade-2;
+  }
+  a {
+    transition: .2s;
+    color: $clr-prim;
+    text-decoration: none;
+    &:hover {
+      color: $clr-prim-dark;
+    }
+  }
+  img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+  footer {
+    box-shadow: $shadow-lg;
+    background-color: #fff;
+    text-align: center;
+    padding: 30px 15px;
+    .pc {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+      font-size: .875rem;
+      font-weight: 700;
+      margin-top: 30px;
+      img {
+        height: 25px;
+      }
+    }
+  }
+}
